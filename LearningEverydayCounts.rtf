@@ -5,11 +5,11 @@
 }
 {\colortbl;\red255\green255\blue255;\red26\green26\blue26;\red38\green38\blue38;\red246\green246\blue246;
 \red12\green99\blue153;\red249\green250\blue251;\red60\green61\blue65;\red148\green108\blue71;\red135\green135\blue135;
-\red133\green0\blue67;\red210\green50\blue85;\red93\green108\blue125;\red0\green0\blue0;\red255\green255\blue255;
-\red0\green0\blue194;\red146\green26\blue32;\red15\green112\blue1;\red217\green11\blue0;\red0\green45\blue153;
-\red0\green61\blue204;\red0\green68\blue254;\red213\green221\blue228;\red85\green138\blue3;\red100\green70\blue0;
-\red50\green44\blue65;\red16\green129\blue213;\red27\green29\blue31;\red235\green236\blue237;\red57\green55\blue55;
-\red134\green19\blue62;\red100\green14\blue47;\red255\green39\blue18;}
+\red133\green0\blue67;\red210\green50\blue85;\red93\green108\blue125;\red217\green11\blue0;\red0\green45\blue153;
+\red0\green61\blue204;\red0\green0\blue194;\red146\green26\blue32;\red15\green112\blue1;\red164\green8\blue0;
+\red0\green68\blue254;\red213\green221\blue228;\red85\green138\blue3;\red100\green70\blue0;\red50\green44\blue65;
+\red16\green129\blue213;\red27\green29\blue31;\red235\green236\blue237;\red57\green55\blue55;\red134\green19\blue62;
+\red100\green14\blue47;\red255\green39\blue18;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
 {\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
 {\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
@@ -206,29 +206,59 @@ A js function can also be defined using an expression. \
 -a function expression can be stored in a variable: \
 eg. var x = function ()\{return \'93hello world\'94\};  // this is also an anonymous function  \
 \
+\cf13 To execute a function stored in variable we must use x(), \
+but keep in mind that if we do this way  \cf14 function sayHello()\{return \'93hello world\'94\}\cf13 \
+\cf15 var z = sayHello();\cf13  //then the sayHello() would execute st. away and it\'92s return value will be stored in z. \cf2 \
+\
 
 \b Self-Invoking Functions\
 \pard\pardeftab720\sl448
 
-\f2\b0\fs32 \cf13 \cb14 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec13 (\cf15 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec15 function\cf13 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec13  () \{\
-\'a0\'a0\'a0 \cf15 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec15 var\cf13 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec13  x = \cf16 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec16 "Hello!!"\cf13 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec13 ;\'a0\'a0\'a0\'a0\'a0 \cf17 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec17 // I will invoke myself\cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\cf13 \cb14 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec13 \})();
-\f1\fs24 \cf2 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
+\f2\b0\fs32 \cf0 \expnd0\expndtw0\kerning0
+(\cf16 \expnd0\expndtw0\kerning0
+function\cf0 \expnd0\expndtw0\kerning0
+ () \{\
+\'a0\'a0\'a0 \cf16 \expnd0\expndtw0\kerning0
+var\cf0 \expnd0\expndtw0\kerning0
+ x = \cf17 \expnd0\expndtw0\kerning0
+"Hello!!"\cf0 \expnd0\expndtw0\kerning0
+;\'a0\'a0\'a0\'a0\'a0 \cf18 \expnd0\expndtw0\kerning0
+// I will invoke myself\
+\cf0 \expnd0\expndtw0\kerning0
+\})();
+\f1\fs24 \cf2 \expnd0\expndtw0\kerning0
+\
 \pard\pardeftab720
 \cf2 \
-\cf18 To execute a function stored in variable we must use x(), but keep in mind that if we do this way  \cf19 function sayHello()\{return \'93hello world\'94\}\cf18 \
-\cf20 var z = sayHello();\cf18  //then the sayHello() would execute st. away and it\'92s return value will be stored in z. \cf2 \
+
+\b What is a Callback Function or Higher-order function\
+
+\b0 -A 
+\b callback
+\b0  function, also know as higher-order function, is a function , that is passed to 
+\b another function
+\b0  (let\'92s call this other function \'93otherFunction\'94) as a parameter, and the callback function is called inside the otherFunction. \
+
+\b \
+eg. 
+\b0 $(\'91#btn1\'92).click(\cf13 function()\{\
+alert(\'93btn clicked\'94);\
+\}\cf2 );
+\b \
+
+\b0 // the function passed(red colored) into the click as parameter is callback function. It\'92s an anonymous function. Keep in mind that this anonymous function is not being executed there in the parameter. \
+\
+
+\b eg.2 
+\b0 \
+var friends = [\'93Mike\'94,\'94Stacy\'94,\'94Andy\'94];\
+\
+\
+friends.forEach(\cf19 function(eachName,index)\{\
+console.log(index+1+\'94.\'94+eachName);\
+\}\cf0 \expnd0\expndtw0\kerning0
+)\cf2 \expnd0\expndtw0\kerning0
+;  //function in red is callback function\
 \
 \
 
@@ -322,13 +352,13 @@ May 10
 \b0\fs24 \expnd0\expndtw0\kerning0
 \
 
-\b \cf21 \expnd0\expndtw0\kerning0
+\b \cf20 \expnd0\expndtw0\kerning0
 Arrow functions
 \b0 \cf2 \expnd0\expndtw0\kerning0
 \
 \pard\pardeftab720\sl380
 
-\f6\b\fs28 \cf7 \cb22 \expnd0\expndtw0\kerning0
+\f6\b\fs28 \cf7 \cb21 \expnd0\expndtw0\kerning0
 (
 \f7\i\b0 \expnd0\expndtw0\kerning0
 param1
@@ -434,19 +464,19 @@ var\cf7 \expnd0\expndtw0\kerning0
  \cf9 \expnd0\expndtw0\kerning0
 [\cf7 \expnd0\expndtw0\kerning0
 \
-  \cf23 \expnd0\expndtw0\kerning0
+  \cf22 \expnd0\expndtw0\kerning0
 "Hydrogen"\cf9 \expnd0\expndtw0\kerning0
 ,\cf7 \expnd0\expndtw0\kerning0
 \
-  \cf23 \expnd0\expndtw0\kerning0
+  \cf22 \expnd0\expndtw0\kerning0
 "Helium"\cf9 \expnd0\expndtw0\kerning0
 ,\cf7 \expnd0\expndtw0\kerning0
 \
-  \cf23 \expnd0\expndtw0\kerning0
+  \cf22 \expnd0\expndtw0\kerning0
 "Lithium"\cf9 \expnd0\expndtw0\kerning0
 ,\cf7 \expnd0\expndtw0\kerning0
 \
-  \cf23 \expnd0\expndtw0\kerning0
+  \cf22 \expnd0\expndtw0\kerning0
 "Beryl\'adlium"\cf7 \expnd0\expndtw0\kerning0
 \
 \cf9 \expnd0\expndtw0\kerning0
@@ -492,24 +522,24 @@ length \cf9 \expnd0\expndtw0\kerning0
 \
 \pard\pardeftab720
 
-\b\fs26 \cf21 \expnd0\expndtw0\kerning0
+\b\fs26 \cf20 \expnd0\expndtw0\kerning0
 Templates(Meteor)
 \fs24 \expnd0\expndtw0\kerning0
 \
 
-\b0 \cf24 \expnd0\expndtw0\kerning0
+\b0 \cf23 \expnd0\expndtw0\kerning0
 Template.myTemplate.events(eventMap) \cf0 \
 //myTemplate == your own template in the html file \
 //eventMap = argument is of type Event Map.. (looks similar to object though like in helpers)\
 \
-\cf24 Template.myTemplate.helpers(helpers)\cf0 \
+\cf23 Template.myTemplate.helpers(helpers)\cf0 \
 //helpers = argument, and is a object .. key is the name of the function and value is the function associated\
 \
-\cf24 Template.myTemplate.onRendered \cf0 \
+\cf23 Template.myTemplate.onRendered \cf0 \
 //Register a function  to be called when an instance of template is inserted into the DOM.\
 //Arguments: a callback \
 \
-\cf24 Template.myTemplate.onCreated \cf0 \
+\cf23 Template.myTemplate.onCreated \cf0 \
 //Register a function  to be called when an instance of template is created.\
 //Arguments : a callback \
 \pard\pardeftab720\sl416
@@ -520,13 +550,13 @@ These callbacks(the arguments of onCreated) fire once and are the first group of
 \cf2 \expnd0\expndtw0\kerning0
 \
 \pard\pardeftab720
-\cf24 \expnd0\expndtw0\kerning0
+\cf23 \expnd0\expndtw0\kerning0
 Template.myTemplate.onDestroy \cf0 \
 //Register a function  to be called when an instance of template is removed from the DOM.\
 //Arguments: a callback \
 \
 
-\b\fs26 \cf21 Template instances\
+\b\fs26 \cf20 Template instances\
 \pard\pardeftab720\sl416
 
 \b0\fs24 \cf3 \expnd0\expndtw0\kerning0
@@ -542,24 +572,24 @@ Template.instance()}}.\
 \
 \pard\pardeftab720
 
-\b0 \cf24 \expnd0\expndtw0\kerning0
+\b0 \cf23 \expnd0\expndtw0\kerning0
 template.subscribe(name,[arg1,agree,..],[options])\
 \cf0 name is the name of subscription. Matches the name of the server\'92s publish() call. \
 template is the how would you get hold of template instance. read above section . \
 \pard\pardeftab720\sl416
 \cf3 \expnd0\expndtw0\kerning0
 You can use this.subscribe from an {\field{\*\fldinst{HYPERLINK "http://docs.meteor.com/#template_onCreated"}}{\fldrslt \cf0 \expnd0\expndtw0\kerning0
-onCreated}} callback to specify which data publications this template depends on. The subscription is automatically stopped when the template is destroyed.\cf21 \expnd0\expndtw0\kerning0
+onCreated}} callback to specify which data publications this template depends on. The subscription is automatically stopped when the template is destroyed.\cf20 \expnd0\expndtw0\kerning0
 \
 \pard\pardeftab720
 \cf0 \expnd0\expndtw0\kerning0
 \
 
-\b\fs26 \cf21 Reactivity(Meteor)\
+\b\fs26 \cf20 Reactivity(Meteor)\
 
-\b0\fs24 \cf24 Reactive Sources\
+\b0\fs24 \cf23 Reactive Sources\
 \pard\pardeftab720
-\cf25 \expnd0\expndtw0\kerning0
+\cf24 \expnd0\expndtw0\kerning0
 Making a JavaScript object 
 \i \expnd0\expndtw0\kerning0
 reactive
@@ -571,10 +601,10 @@ reactive data source
 ) is a bit like training your dog: you\'92re essentially telling the object to let you know whenever something inside it changes.\
 \
 \pard\pardeftab720
-\cf24 \expnd0\expndtw0\kerning0
+\cf23 \expnd0\expndtw0\kerning0
 Reactive Computations\
 \pard\pardeftab720
-\cf25 \expnd0\expndtw0\kerning0
+\cf24 \expnd0\expndtw0\kerning0
 A reactive computation is simply a block of code (basically, the inside of a function) that will re-run 
 \i \expnd0\expndtw0\kerning0
 whenever a reactive data source inside it changes
@@ -588,13 +618,13 @@ May11
 \
 \pard\pardeftab720
 
-\b \cf20 \expnd0\expndtw0\kerning0
+\b \cf15 \expnd0\expndtw0\kerning0
 Scoping rules (let vs var)
 \b0 \cf2 \expnd0\expndtw0\kerning0
 \
 \pard\pardeftab720\sl420
 \cf7 \expnd0\expndtw0\kerning0
-let allows you to declare variables that are limited in scope to the block, statement, or expression on which it is used. This is unlike the {\field{\*\fldinst{HYPERLINK "https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Statements/var"}}{\fldrslt \cf26 \expnd0\expndtw0\kerning0
+let allows you to declare variables that are limited in scope to the block, statement, or expression on which it is used. This is unlike the {\field{\*\fldinst{HYPERLINK "https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Statements/var"}}{\fldrslt \cf25 \expnd0\expndtw0\kerning0
 var}} keyword, which defines a variable globally, or locally to an entire function regardless of block scope.\
 \pard\pardeftab720\sl420
 
@@ -727,7 +757,7 @@ At the top level of programs and functions, let, unlike var, doesn\'92t create a
 var\cf7 \expnd0\expndtw0\kerning0
  x \cf8 \cb1 \expnd0\expndtw0\kerning0
 =\cf7 \cb6 \expnd0\expndtw0\kerning0
- \cf23 \expnd0\expndtw0\kerning0
+ \cf22 \expnd0\expndtw0\kerning0
 'global'\cf9 \expnd0\expndtw0\kerning0
 ;\cf7 \expnd0\expndtw0\kerning0
 \
@@ -735,7 +765,7 @@ var\cf7 \expnd0\expndtw0\kerning0
 let\cf7 \expnd0\expndtw0\kerning0
  y \cf8 \cb1 \expnd0\expndtw0\kerning0
 =\cf7 \cb6 \expnd0\expndtw0\kerning0
- \cf23 \expnd0\expndtw0\kerning0
+ \cf22 \expnd0\expndtw0\kerning0
 'global'\cf9 \expnd0\expndtw0\kerning0
 ;\cf7 \expnd0\expndtw0\kerning0
 \
@@ -768,7 +798,7 @@ Running Mongod on terminal
 \b0\fs24 \expnd0\expndtw0\kerning0
 \
 run this first 
-\f2\fs26 \cf27 \cb28 \expnd0\expndtw0\kerning0
+\f2\fs26 \cf26 \cb27 \expnd0\expndtw0\kerning0
 brew services start mongodb\
 \pard\pardeftab720\sl420
 
@@ -782,17 +812,17 @@ Working With Mongo Shell
 \
 \pard\pardeftab720\sl480
 
-\fs32 \cf29 \expnd0\expndtw0\kerning0
+\fs32 \cf28 \expnd0\expndtw0\kerning0
 To display the database you are using, type 
 \f8 \cf0 \expnd0\expndtw0\kerning0
 db
-\f1 \cf29 \expnd0\expndtw0\kerning0
+\f1 \cf28 \expnd0\expndtw0\kerning0
 :
 \fs24 \cf2 \expnd0\expndtw0\kerning0
 \
 \pard\pardeftab720\sl420
 
-\f2\fs26 \cf27 \cb28 \expnd0\expndtw0\kerning0
+\f2\fs26 \cf26 \cb27 \expnd0\expndtw0\kerning0
 db\
 
 \f1\fs24 \cf2 \cb1 \expnd0\expndtw0\kerning0
@@ -813,7 +843,7 @@ Promises in JavaScript\
 \b then
 \b0  method)\
 \
-\cf30 Promise States\
+\cf29 Promise States\
 \cf2 A promise must be in one of the following 3 states: pending, fulfilled or rejected. \
 1. When pending, a promise: may transition to either the fulfilled or rejected state.\
 2. When fulfilled, a promise: \
@@ -823,17 +853,17 @@ Promises in JavaScript\
 	-must not transition to any other state.\
 	-must have a reason, which must not change. \
 \
-\cf31 The 
+\cf30 The 
 \b then
 \b0  Method\
 \cf0 -A promise must provide a then method to access its current or eventual value or reason of rejected state. \
 -then method accepts two arguments: \
 
-\b \cf19 promise.then(onFulfilled, onRejected)
+\b \cf14 promise.then(onFulfilled, onRejected)
 \b0 \
 \cf0 1.Both onFulfilled and onRejected are optional arguments.\
 	-if onFulfilled or onRejected are not functions, they can be ignored\
-\cf19 2. if onFulfilled is a function \
+\cf14 2. if onFulfilled is a function \
 	\cf0 -it must be called after promise is fulfilled, with promise\'92s value as it\'92s first argument.\
 	-it must not be called before promise is fulfilled.\
 	-it must not be called more than once.\
@@ -843,13 +873,13 @@ Promises in JavaScript\
 	-it must not be called before promise is rejected.\
 	-it must not be called more than once.\expnd0\expndtw0\kerning0
 \
-\cf19 \
+\cf14 \
 \
 \
 \
 \cf2 \
 \pard\pardeftab720\sl420
-\cf32 \expnd0\expndtw0\kerning0
+\cf31 \expnd0\expndtw0\kerning0
 FrontEnd development libraries and frameworks \cf2 \expnd0\expndtw0\kerning0
 \
 Backbone\
