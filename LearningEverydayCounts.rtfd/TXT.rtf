@@ -1,0 +1,988 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 Consolas;
+\f3\fnil\fcharset0 Menlo-Bold;\f4\fnil\fcharset0 Menlo-Regular;\f5\fmodern\fcharset0 Courier;
+\f6\fnil\fcharset0 Consolas-Bold;\f7\fnil\fcharset0 Consolas-Italic;\f8\fnil\fcharset0 SourceCodePro-Regular;
+\f9\fnil\fcharset0 Calibri;}
+{\colortbl;\red255\green255\blue255;\red26\green26\blue26;\red38\green38\blue38;\red246\green246\blue246;
+\red12\green99\blue153;\red249\green250\blue251;\red60\green61\blue65;\red148\green108\blue71;\red135\green135\blue135;
+\red133\green0\blue67;\red210\green50\blue85;\red93\green108\blue125;\red217\green11\blue0;\red0\green45\blue153;
+\red0\green61\blue204;\red0\green0\blue194;\red146\green26\blue32;\red15\green112\blue1;\red164\green8\blue0;
+\red0\green68\blue254;\red213\green221\blue228;\red85\green138\blue3;\red100\green70\blue0;\red50\green44\blue65;
+\red16\green129\blue213;\red27\green29\blue31;\red235\green236\blue237;\red57\green55\blue55;\red134\green19\blue62;
+\red100\green14\blue47;\red0\green0\blue0;\red255\green255\blue255;\red52\green52\blue52;\red255\green39\blue18;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid401\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid5}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww15340\viewh13220\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\b\fs24 \cf0 \
+Things Learnt Today \
+April 4\
+Introduction to MeteorJS
+\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0
+\f1 \cf2 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+Meteor handles some of the boring details for us, like using the 
+\f2 \cf3 \cb4 \expnd0\expndtw0\kerning0
+html
+\f1 \cf2 \cb1 \expnd0\expndtw0\kerning0
+tags and including JavaScript and CSS files.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+By creating templates, we\'92re able to form a bridge between our application logic and our interface.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+Our project\'92s code can run on both the client and the server, but we don\'92t always want this to happen. We can use the 
+\f2 \cf3 \cb4 \expnd0\expndtw0\kerning0
+isClient
+\f1 \cf2 \cb1 \expnd0\expndtw0\kerning0
+ and 
+\f2 \cf3 \cb4 \expnd0\expndtw0\kerning0
+isServer
+\f1 \cf2 \cb1 \expnd0\expndtw0\kerning0
+conditionals to control where the code is run.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+After creating a template, we need to manually include it within the interface. This gives us control over where and 
+\i \expnd0\expndtw0\kerning0
+when
+\i0 \expnd0\expndtw0\kerning0
+ it appears.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+By creating helper functions, we can execute code from within a template, thereby creating a dynamic interface.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+If a helper function returns an array of data, we can loop through that data from within a template using the 
+\f2 \cf3 \cb4 \expnd0\expndtw0\kerning0
+each
+\f1 \cf2 \cb1 \expnd0\expndtw0\kerning0
+ syntax.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}Session is only for client side and not server thing in meteor \expnd0\expndtw0\kerning0
+\
+\pard\tx566\pardeftab720
+
+\b \cf2 \expnd0\expndtw0\kerning0
+April 5
+\b0 \
+
+\b Subscription and Publication
+\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+By default, all the data inside a Meteor project\'92s database is available to all users of that application. This is convenient during development, but it\'92s also a big security hole that need to be fixed before deployment.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+This default functionality is contained within an \'93autopublish\'94 package. If we remove this package, the project will be more secure, but it\'92ll also break and need to be fixed.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+The 
+\f2 \cf3 \cb4 \expnd0\expndtw0\kerning0
+Meteor.publish
+\f1 \cf2 \cb1 \expnd0\expndtw0\kerning0
+ function is used on the server-side to define what data should be available to users of the application.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+The 
+\f2 \cf3 \cb4 \expnd0\expndtw0\kerning0
+Meteor.subscribe
+\f1 \cf2 \cb1 \expnd0\expndtw0\kerning0
+ function is used on the client-side to retrieve the data that\'92s published from the server.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+Inside the publish function, we can\'92t use the 
+\f2 \cf3 \cb4 \expnd0\expndtw0\kerning0
+Meteor.userId()
+\f1 \cf2 \cb1 \expnd0\expndtw0\kerning0
+function, but we can retrieve the current user\'92s ID with 
+\f2 \cf3 \cb4 \expnd0\expndtw0\kerning0
+this.userId\
+\pard\tx566\pardeftab720
+\cf3 \expnd0\expndtw0\kerning0
+\
+\pard\tx566\pardeftab720
+
+\f1\b \cf2 \cb1 \expnd0\expndtw0\kerning0
+Methods\
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls3\ilvl0
+\b0 \cf2 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+By default, it\'92s possible for users to insert, update, and remove data from a collection using the JavaScript Console. This is convenient for development, but a security risk for a deployed web application.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+To fix this security risk, we must move our database-related code from the client-side, to the trusted environment of the server. Here, users won\'92t have any direct access to (or control over) the database.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+This security risk is contained within an \'93insecure\'94 package. By removing this package, the application will become a lot more secure, but it\'92ll also break, since none of the database-related features will work.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+By using methods, we\'92re able to write code that runs on the server after first being triggered from the client. This is how we can fix the project\'92s broken features.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+To create methods, we can define them within a 
+\f2 \cf3 \cb4 \expnd0\expndtw0\kerning0
+methods
+\f1 \cf2 \cb1 \expnd0\expndtw0\kerning0
+ block, and then trigger them from elsewhere in the code using 
+\f2 \cf3 \cb4 \expnd0\expndtw0\kerning0
+Meteor.call 
+\f1 \cf2 \cb1 \expnd0\expndtw0\kerning0
+statements.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+We can pass data from the 
+\f2 \cf3 \cb4 \expnd0\expndtw0\kerning0
+Meteor.call
+\f1 \cf2 \cb1 \expnd0\expndtw0\kerning0
+ statements and into the method, allowing us to use submitted data from a form inside the method.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+Users can execute client-side 
+\f2 \cf3 \cb4 \expnd0\expndtw0\kerning0
+Meteor.call
+\f1 \cf2 \cb1 \expnd0\expndtw0\kerning0
+ statements through the Console, so we need to be mindful of what those statements allow the users to do.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+Methods are not only useful for security. They\'92re also useful for combining similar chunks of functionality into a small and repeatable fragment of code.\
+\pard\tx566\pardeftab720
+\cf2 \expnd0\expndtw0\kerning0
+\
+\
+\pard\pardeftab720
+
+\f3\b\fs22 \cf2 \expnd0\expndtw0\kerning0
+April 12 \
+Javascript -Array map() method
+\f1\b0 \
+javascript array map() method creates a new array with result of provided 
+\f4 function on every element 
+\f1 in this array. \
+\pard\pardeftab720
+
+\fs24 \cf5 \cb6 \expnd0\expndtw0\kerning0
+var\cf7 \expnd0\expndtw0\kerning0
+ numbers \cf8 \cb1 \expnd0\expndtw0\kerning0
+=\cf7 \cb6 \expnd0\expndtw0\kerning0
+ \cf9 \expnd0\expndtw0\kerning0
+[\cf10 \expnd0\expndtw0\kerning0
+1\cf9 \expnd0\expndtw0\kerning0
+,\cf7 \expnd0\expndtw0\kerning0
+ \cf10 \expnd0\expndtw0\kerning0
+4\cf9 \expnd0\expndtw0\kerning0
+,\cf7 \expnd0\expndtw0\kerning0
+ \cf10 \expnd0\expndtw0\kerning0
+9\cf9 \expnd0\expndtw0\kerning0
+];\cf7 \expnd0\expndtw0\kerning0
+\
+\cf5 \expnd0\expndtw0\kerning0
+var\cf7 \expnd0\expndtw0\kerning0
+ roots \cf8 \cb1 \expnd0\expndtw0\kerning0
+=\cf7 \cb6 \expnd0\expndtw0\kerning0
+ numbers\cf9 \expnd0\expndtw0\kerning0
+.\cf11 \expnd0\expndtw0\kerning0
+map\cf9 \expnd0\expndtw0\kerning0
+(\cf7 \expnd0\expndtw0\kerning0
+Math\cf9 \expnd0\expndtw0\kerning0
+.\cf7 \expnd0\expndtw0\kerning0
+sqrt\cf9 \expnd0\expndtw0\kerning0
+);\cf7 \expnd0\expndtw0\kerning0
+\
+\cf12 \expnd0\expndtw0\kerning0
+// roots is now [1, 2, 3], numbers is still [1, 4, 9]
+\f2\fs28 \cf7 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+
+\f1\fs24 \cf2 \cb1 \expnd0\expndtw0\kerning0
+\
+
+\b Javascript Array Prototype constructor
+\b0 \
+-Array.prototype.name = value  //syntax\
+-Allows you to add properties and methods to an Array object.\
+\
+
+\b JavaScript Function Declaration \
+
+\b0 function functionName(parameters)\{\
+//code to be executed\
+\}\
+eg. function myFunction(a,b)\{\
+return a*b;\}\
+\
+
+\b Function Expression
+\b0  \
+A js function can also be defined using an expression. \
+-a function expression can be stored in a variable: \
+eg. var x = function ()\{return \'93hello world\'94\};  // this is also an anonymous function  \
+\
+\cf13 To execute a function stored in variable we must use x(), \
+but keep in mind that if we do this way  \cf14 function sayHello()\{return \'93hello world\'94\}\cf13 \
+\cf15 var z = sayHello();\cf13  //then the sayHello() would execute st. away and it\'92s return value will be stored in z. \cf2 \
+\
+
+\b Self-Invoking Functions\
+\pard\pardeftab720\sl448
+
+\f2\b0\fs32 \cf0 \expnd0\expndtw0\kerning0
+(\cf16 \expnd0\expndtw0\kerning0
+function\cf0 \expnd0\expndtw0\kerning0
+ () \{\
+\'a0\'a0\'a0 \cf16 \expnd0\expndtw0\kerning0
+var\cf0 \expnd0\expndtw0\kerning0
+ x = \cf17 \expnd0\expndtw0\kerning0
+"Hello!!"\cf0 \expnd0\expndtw0\kerning0
+;\'a0\'a0\'a0\'a0\'a0 \cf18 \expnd0\expndtw0\kerning0
+// I will invoke myself\
+\cf0 \expnd0\expndtw0\kerning0
+\})();
+\f1\fs24 \cf2 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf2 \
+
+\b What is a Callback Function or Higher-order function\
+
+\b0 -A 
+\b callback
+\b0  function, also know as higher-order function, is a function , that is passed to 
+\b another function
+\b0  (let\'92s call this other function \'93otherFunction\'94) as a parameter, and the callback function is called inside the otherFunction. \
+
+\b \
+eg. 
+\b0 $(\'91#btn1\'92).click(\cf13 function()\{\
+alert(\'93btn clicked\'94);\
+\}\cf2 );
+\b \
+
+\b0 // the function passed(red colored) into the click as parameter is callback function. It\'92s an anonymous function. Keep in mind that this anonymous function is not being executed there in the parameter. \
+\
+
+\b eg.2 
+\b0 \
+var friends = [\'93Mike\'94,\'94Stacy\'94,\'94Andy\'94];\
+\
+\
+friends.forEach(\cf19 function(eachName,index)\{\
+console.log(index+1+\'94.\'94+eachName);\
+\}\cf0 \expnd0\expndtw0\kerning0
+)\cf2 \expnd0\expndtw0\kerning0
+;  //function in red is callback function\
+\
+
+\b How to write custom callback function\
+
+\b0 function mySandwich(a,b,callback)\{\
+console.log(\'93started eating my sandwich \'93+a+\'94,\'94+b\'94);\
+callback();\
+\}\
+\
+mySandwich(\'91roti\'92,\'92chawal\'92,function()\{\
+console.log(\'93done eating sandwich\'94);\
+\});\
+\
+\
+\
+\
+
+\b April 19\
+RESTful API\
+\
+\pard\tx566\pardeftab720
+
+\b0 \cf2 \kerning1\expnd0\expndtw0 For an API or web service to be RESTful, it must do the followiing: \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls4\ilvl0\cf2 {\listtext	\'95	}Separate the client from the server.\
+{\listtext	\'95	}Not hold state between requests.(all necessary information to respond to a request is available in each individual request;no data, or state, is held by the server from request to request. \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls4\ilvl0
+\b \cf2 {\listtext	\'95	}
+\b0 Use HTTP and HTTP  method \
+\
+\ls4\ilvl0
+\b Endpoints 
+\b0 are API-defined locations where particular data are stored. 
+\b \
+\pard\tx566\pardeftab720
+\cf2 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf2 \expnd0\expndtw0\kerning0
+\
+Javascript Callback function and closures\
+
+\b0 read pocket app with callback tag\
+\
+\
+
+\b April 20\
+oAuth\
+3 legged flow : a client, a server, and a resource owner\
+\
+
+\b0 -OAuth uses 3 kinds of credentials: 
+\b client
+\b0 , 
+\b temporary
+\b0 , and 
+\b token 
+\b0 credentials \
+-Client credentials: used to authenticate client and allows server(Facebook /twitter) to collect information   	about the clients(some 3rd party app) using its services. \
+-Token credentials are used in place of the resource owner\'92s(aman singh) username and password. \
+Instead of having the resource owner share its credential with  the client (3rd party app), it authorises the server to issue a special class of credentials to the client which represent the access grant given to the client by the resource owner. the client uses the token credential to access the protected resource without having to know the resource owner\'92s (aman) password. \
+
+\b \
+Protocol Flow\
+\pard\pardeftab720
+
+\f5\b0\fs26 \cf0 \expnd0\expndtw0\kerning0
+	+--------+                               +---------------+\
+     |        |--(A)- Authorization Request ->|   Resource    |\
+     |        |                               |     Owner     |\
+     |        |<-(B)-- Authorization Grant ---|               |\
+     |        |                               +---------------+\
+     |        |\
+     |        |                               +---------------+\
+     |        |--(C)-- Authorization Grant -->| Authorization |\
+     | Client |                               |     Server    |\
+     |        |<-(D)----- Access Token -------|               |\
+     |        |                               +---------------+\
+     |        |\
+     |        |                               +---------------+\
+     |        |--(E)----- Access Token ------>|    Resource   |\
+     |        |                               |     Server    |\
+     |        |<-(F)--- Protected Resource ---|               |\
+     +--------+                               +---------------+\
+\pard\pardeftab720
+
+\f1\b\fs24 \cf2 \expnd0\expndtw0\kerning0
+\
+REST APIs\
+\
+\
+April 27th \
+
+\b0 MongoDb indexing helps to increase the efficiency while queuing the database. \
+high cordinality == very unique entity \
+low cordinality == less unique. (like gender )\
+\
+Always  index the thing with high cordinality (the thing which can be uniquely identifies)\
+\
+\pard\pardeftab720
+
+\b\fs26 \cf2 \expnd0\expndtw0\kerning0
+May 10
+\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\b \cf20 \expnd0\expndtw0\kerning0
+Arrow functions
+\b0 \cf2 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl380
+
+\f6\b\fs28 \cf7 \cb21 \expnd0\expndtw0\kerning0
+(
+\f7\i\b0 \expnd0\expndtw0\kerning0
+param1
+\f2\i0 \expnd0\expndtw0\kerning0
+, 
+\f7\i \expnd0\expndtw0\kerning0
+param2
+\f2\i0 \expnd0\expndtw0\kerning0
+, \'85, 
+\f7\i \expnd0\expndtw0\kerning0
+paramN
+\f6\i0\b \expnd0\expndtw0\kerning0
+) => \{
+\f2\b0 \expnd0\expndtw0\kerning0
+ 
+\f7\i \expnd0\expndtw0\kerning0
+statements
+\f2\i0 \expnd0\expndtw0\kerning0
+ 
+\f6\b \expnd0\expndtw0\kerning0
+\}
+\f2\b0 \expnd0\expndtw0\kerning0
+\
+
+\f6\b \expnd0\expndtw0\kerning0
+(
+\f7\i\b0 \expnd0\expndtw0\kerning0
+param1
+\f2\i0 \expnd0\expndtw0\kerning0
+, 
+\f7\i \expnd0\expndtw0\kerning0
+param2
+\f2\i0 \expnd0\expndtw0\kerning0
+, \'85, 
+\f7\i \expnd0\expndtw0\kerning0
+paramN
+\f6\i0\b \expnd0\expndtw0\kerning0
+) =>
+\f2\b0 \expnd0\expndtw0\kerning0
+ 
+\f7\i \expnd0\expndtw0\kerning0
+expression
+\f2\i0 \expnd0\expndtw0\kerning0
+\
+         // equivalent to:\'a0 => \{ return expression; \}\
+\
+// Parentheses are optional when there's only one parameter:\
+
+\f7\i \expnd0\expndtw0\kerning0
+(singleParam)
+\f2\i0 \expnd0\expndtw0\kerning0
+ 
+\f6\b \expnd0\expndtw0\kerning0
+=> \{
+\f2\b0 \expnd0\expndtw0\kerning0
+ 
+\f7\i \expnd0\expndtw0\kerning0
+statements
+\f2\i0 \expnd0\expndtw0\kerning0
+ 
+\f6\b \expnd0\expndtw0\kerning0
+\}
+\f2\b0 \expnd0\expndtw0\kerning0
+\
+
+\f7\i \expnd0\expndtw0\kerning0
+singleParam
+\f2\i0 \expnd0\expndtw0\kerning0
+ 
+\f6\b \expnd0\expndtw0\kerning0
+=>
+\f2\b0 \expnd0\expndtw0\kerning0
+ \{ 
+\f7\i \expnd0\expndtw0\kerning0
+statements \}
+\f2\i0 \expnd0\expndtw0\kerning0
+\
+\
+// A function with no parameters requires parentheses:\
+
+\f6\b \expnd0\expndtw0\kerning0
+() => \{
+\f2\b0 \expnd0\expndtw0\kerning0
+ 
+\f7\i \expnd0\expndtw0\kerning0
+statements
+\f2\i0 \expnd0\expndtw0\kerning0
+ 
+\f6\b \expnd0\expndtw0\kerning0
+\}
+\f2\b0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+
+\f1\fs24 \cf2 \cb1 \expnd0\expndtw0\kerning0
+shorter functions\
+\pard\pardeftab720\sl420
+
+\f2\fs28 \cf5 \cb6 \expnd0\expndtw0\kerning0
+var\cf7 \expnd0\expndtw0\kerning0
+ a \cf8 \cb1 \expnd0\expndtw0\kerning0
+=\cf7 \cb6 \expnd0\expndtw0\kerning0
+ \cf9 \expnd0\expndtw0\kerning0
+[\cf7 \expnd0\expndtw0\kerning0
+\
+  \cf22 \expnd0\expndtw0\kerning0
+"Hydrogen"\cf9 \expnd0\expndtw0\kerning0
+,\cf7 \expnd0\expndtw0\kerning0
+\
+  \cf22 \expnd0\expndtw0\kerning0
+"Helium"\cf9 \expnd0\expndtw0\kerning0
+,\cf7 \expnd0\expndtw0\kerning0
+\
+  \cf22 \expnd0\expndtw0\kerning0
+"Lithium"\cf9 \expnd0\expndtw0\kerning0
+,\cf7 \expnd0\expndtw0\kerning0
+\
+  \cf22 \expnd0\expndtw0\kerning0
+"Beryl\'adlium"\cf7 \expnd0\expndtw0\kerning0
+\
+\cf9 \expnd0\expndtw0\kerning0
+];\cf7 \expnd0\expndtw0\kerning0
+\
+\cf5 \expnd0\expndtw0\kerning0
+var\cf7 \expnd0\expndtw0\kerning0
+ a2 \cf8 \cb1 \expnd0\expndtw0\kerning0
+=\cf7 \cb6 \expnd0\expndtw0\kerning0
+ a\cf9 \expnd0\expndtw0\kerning0
+.\cf11 \expnd0\expndtw0\kerning0
+map\cf9 \expnd0\expndtw0\kerning0
+(\cf5 \expnd0\expndtw0\kerning0
+function\cf9 \expnd0\expndtw0\kerning0
+(\cf7 \expnd0\expndtw0\kerning0
+s\cf9 \expnd0\expndtw0\kerning0
+)\{\cf7 \expnd0\expndtw0\kerning0
+ \cf5 \expnd0\expndtw0\kerning0
+return\cf7 \expnd0\expndtw0\kerning0
+ s\cf9 \expnd0\expndtw0\kerning0
+.\cf7 \expnd0\expndtw0\kerning0
+length \cf9 \expnd0\expndtw0\kerning0
+\});\cf7 \expnd0\expndtw0\kerning0
+\
+\cf5 \expnd0\expndtw0\kerning0
+var\cf7 \expnd0\expndtw0\kerning0
+ a3 \cf8 \cb1 \expnd0\expndtw0\kerning0
+=\cf7 \cb6 \expnd0\expndtw0\kerning0
+ a\cf9 \expnd0\expndtw0\kerning0
+.\cf11 \expnd0\expndtw0\kerning0
+map\cf9 \expnd0\expndtw0\kerning0
+(\cf7 \expnd0\expndtw0\kerning0
+ s \cf8 \cb1 \expnd0\expndtw0\kerning0
+=>\cf7 \cb6 \expnd0\expndtw0\kerning0
+ s\cf9 \expnd0\expndtw0\kerning0
+.\cf7 \expnd0\expndtw0\kerning0
+length \cf9 \expnd0\expndtw0\kerning0
+);\cf7 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+
+\f1\fs24 \cf2 \cb1 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+
+\b\fs26 \cf20 \expnd0\expndtw0\kerning0
+Templates(Meteor)
+\fs24 \expnd0\expndtw0\kerning0
+\
+
+\b0 \cf23 \expnd0\expndtw0\kerning0
+Template.myTemplate.events(eventMap) \cf0 \
+//myTemplate == your own template in the html file \
+//eventMap = argument is of type Event Map.. (looks similar to object though like in helpers)\
+\
+\cf23 Template.myTemplate.helpers(helpers)\cf0 \
+//helpers = argument, and is a object .. key is the name of the function and value is the function associated\
+\
+\cf23 Template.myTemplate.onRendered \cf0 \
+//Register a function  to be called when an instance of template is inserted into the DOM.\
+//Arguments: a callback \
+\
+\cf23 Template.myTemplate.onCreated \cf0 \
+//Register a function  to be called when an instance of template is created.\
+//Arguments : a callback \
+\pard\pardeftab720\sl416
+\cf3 \expnd0\expndtw0\kerning0
+These callbacks(the arguments of onCreated) fire once and are the first group of callbacks to fire. Handling the created event is a useful way to set up values on template instance that are read from template helpers usingTemplate.instance().\cf2 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf2 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf23 \expnd0\expndtw0\kerning0
+Template.myTemplate.onDestroy \cf0 \
+//Register a function  to be called when an instance of template is removed from the DOM.\
+//Arguments: a callback \
+\
+
+\b\fs26 \cf20 Template instances\
+\pard\pardeftab720\sl416
+
+\b0\fs24 \cf3 \expnd0\expndtw0\kerning0
+-A template instance object represents an occurrence of a template in the document.\
+-Template instance objects are found as the value of 
+\b \expnd0\expndtw0\kerning0
+this
+\b0 \expnd0\expndtw0\kerning0
+ in the onCreated, onRendered, and onDestroyed template callbacks, and as an argument to event handlers. You can access the current template instance from helpers using
+\b \expnd0\expndtw0\kerning0
+ {\field{\*\fldinst{HYPERLINK "http://docs.meteor.com/#template_instance"}}{\fldrslt \cf0 \expnd0\expndtw0\kerning0
+Template.instance()}}.\
+\
+\pard\pardeftab720
+
+\b0 \cf23 \expnd0\expndtw0\kerning0
+template.subscribe(name,[arg1,agree,..],[options])\
+\cf0 name is the name of subscription. Matches the name of the server\'92s publish() call. \
+template is the how would you get hold of template instance. read above section . \
+\pard\pardeftab720\sl416
+\cf3 \expnd0\expndtw0\kerning0
+You can use this.subscribe from an {\field{\*\fldinst{HYPERLINK "http://docs.meteor.com/#template_onCreated"}}{\fldrslt \cf0 \expnd0\expndtw0\kerning0
+onCreated}} callback to specify which data publications this template depends on. The subscription is automatically stopped when the template is destroyed.\cf20 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+
+\b\fs26 \cf20 Reactivity(Meteor)\
+
+\b0\fs24 \cf23 Reactive Sources\
+\pard\pardeftab720
+\cf24 \expnd0\expndtw0\kerning0
+Making a JavaScript object 
+\i \expnd0\expndtw0\kerning0
+reactive
+\i0 \expnd0\expndtw0\kerning0
+ (in other words transforming it into a 
+\b \expnd0\expndtw0\kerning0
+reactive data source
+\b0 \expnd0\expndtw0\kerning0
+) is a bit like training your dog: you\'92re essentially telling the object to let you know whenever something inside it changes.\
+\
+\pard\pardeftab720
+\cf23 \expnd0\expndtw0\kerning0
+Reactive Computations\
+\pard\pardeftab720
+\cf24 \expnd0\expndtw0\kerning0
+A reactive computation is simply a block of code (basically, the inside of a function) that will re-run 
+\i \expnd0\expndtw0\kerning0
+whenever a reactive data source inside it changes
+\i0 \expnd0\expndtw0\kerning0
+.\
+\
+
+\b\fs26 \expnd0\expndtw0\kerning0
+May11
+\b0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+
+\b \cf15 \expnd0\expndtw0\kerning0
+Scoping rules (let vs var)
+\b0 \cf2 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl420
+\cf7 \expnd0\expndtw0\kerning0
+let allows you to declare variables that are limited in scope to the block, statement, or expression on which it is used. This is unlike the {\field{\*\fldinst{HYPERLINK "https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Statements/var"}}{\fldrslt \cf25 \expnd0\expndtw0\kerning0
+var}} keyword, which defines a variable globally, or locally to an entire function regardless of block scope.\
+\pard\pardeftab720\sl420
+
+\f2\fs28 \cf5 \cb6 \expnd0\expndtw0\kerning0
+function\cf7 \expnd0\expndtw0\kerning0
+ \cf11 \expnd0\expndtw0\kerning0
+varTest\cf9 \expnd0\expndtw0\kerning0
+()\cf7 \expnd0\expndtw0\kerning0
+ \cf9 \expnd0\expndtw0\kerning0
+\{\cf7 \expnd0\expndtw0\kerning0
+\
+  \cf5 \expnd0\expndtw0\kerning0
+var\cf7 \expnd0\expndtw0\kerning0
+ x \cf8 \cb1 \expnd0\expndtw0\kerning0
+=\cf7 \cb6 \expnd0\expndtw0\kerning0
+ \cf10 \expnd0\expndtw0\kerning0
+31\cf9 \expnd0\expndtw0\kerning0
+;\cf7 \expnd0\expndtw0\kerning0
+\
+  \cf5 \expnd0\expndtw0\kerning0
+if\cf7 \expnd0\expndtw0\kerning0
+ \cf9 \expnd0\expndtw0\kerning0
+(\cf5 \expnd0\expndtw0\kerning0
+true\cf9 \expnd0\expndtw0\kerning0
+)\cf7 \expnd0\expndtw0\kerning0
+ \cf9 \expnd0\expndtw0\kerning0
+\{\cf7 \expnd0\expndtw0\kerning0
+\
+    \cf5 \expnd0\expndtw0\kerning0
+var\cf7 \expnd0\expndtw0\kerning0
+ x \cf8 \cb1 \expnd0\expndtw0\kerning0
+=\cf7 \cb6 \expnd0\expndtw0\kerning0
+ \cf10 \expnd0\expndtw0\kerning0
+71\cf9 \expnd0\expndtw0\kerning0
+;\cf7 \expnd0\expndtw0\kerning0
+  \cf12 \expnd0\expndtw0\kerning0
+// same variable!\cf7 \expnd0\expndtw0\kerning0
+\
+    console\cf9 \expnd0\expndtw0\kerning0
+.\cf11 \expnd0\expndtw0\kerning0
+log\cf9 \expnd0\expndtw0\kerning0
+(\cf7 \expnd0\expndtw0\kerning0
+x\cf9 \expnd0\expndtw0\kerning0
+);\cf7 \expnd0\expndtw0\kerning0
+  \cf12 \expnd0\expndtw0\kerning0
+// 71\cf7 \expnd0\expndtw0\kerning0
+\
+  \cf9 \expnd0\expndtw0\kerning0
+\}\cf7 \expnd0\expndtw0\kerning0
+\
+  console\cf9 \expnd0\expndtw0\kerning0
+.\cf11 \expnd0\expndtw0\kerning0
+log\cf9 \expnd0\expndtw0\kerning0
+(\cf7 \expnd0\expndtw0\kerning0
+x\cf9 \expnd0\expndtw0\kerning0
+);\cf7 \expnd0\expndtw0\kerning0
+  \cf12 \expnd0\expndtw0\kerning0
+// 71\cf7 \expnd0\expndtw0\kerning0
+\
+\cf9 \expnd0\expndtw0\kerning0
+\}\cf7 \expnd0\expndtw0\kerning0
+\
+\
+\cf5 \expnd0\expndtw0\kerning0
+function\cf7 \expnd0\expndtw0\kerning0
+ \cf11 \expnd0\expndtw0\kerning0
+letTest\cf9 \expnd0\expndtw0\kerning0
+()\cf7 \expnd0\expndtw0\kerning0
+ \cf9 \expnd0\expndtw0\kerning0
+\{\cf7 \expnd0\expndtw0\kerning0
+\
+  \cf5 \expnd0\expndtw0\kerning0
+let\cf7 \expnd0\expndtw0\kerning0
+ x \cf8 \cb1 \expnd0\expndtw0\kerning0
+=\cf7 \cb6 \expnd0\expndtw0\kerning0
+ \cf10 \expnd0\expndtw0\kerning0
+31\cf9 \expnd0\expndtw0\kerning0
+;\cf7 \expnd0\expndtw0\kerning0
+\
+  \cf5 \expnd0\expndtw0\kerning0
+if\cf7 \expnd0\expndtw0\kerning0
+ \cf9 \expnd0\expndtw0\kerning0
+(\cf5 \expnd0\expndtw0\kerning0
+true\cf9 \expnd0\expndtw0\kerning0
+)\cf7 \expnd0\expndtw0\kerning0
+ \cf9 \expnd0\expndtw0\kerning0
+\{\cf7 \expnd0\expndtw0\kerning0
+\
+    \cf5 \expnd0\expndtw0\kerning0
+let\cf7 \expnd0\expndtw0\kerning0
+ x \cf8 \cb1 \expnd0\expndtw0\kerning0
+=\cf7 \cb6 \expnd0\expndtw0\kerning0
+ \cf10 \expnd0\expndtw0\kerning0
+71\cf9 \expnd0\expndtw0\kerning0
+;\cf7 \expnd0\expndtw0\kerning0
+  \cf12 \expnd0\expndtw0\kerning0
+// different variable\cf7 \expnd0\expndtw0\kerning0
+\
+    console\cf9 \expnd0\expndtw0\kerning0
+.\cf11 \expnd0\expndtw0\kerning0
+log\cf9 \expnd0\expndtw0\kerning0
+(\cf7 \expnd0\expndtw0\kerning0
+x\cf9 \expnd0\expndtw0\kerning0
+);\cf7 \expnd0\expndtw0\kerning0
+  \cf12 \expnd0\expndtw0\kerning0
+// 71\cf7 \expnd0\expndtw0\kerning0
+\
+  \cf9 \expnd0\expndtw0\kerning0
+\}\cf7 \expnd0\expndtw0\kerning0
+\
+  console\cf9 \expnd0\expndtw0\kerning0
+.\cf11 \expnd0\expndtw0\kerning0
+log\cf9 \expnd0\expndtw0\kerning0
+(\cf7 \expnd0\expndtw0\kerning0
+x\cf9 \expnd0\expndtw0\kerning0
+);\cf7 \expnd0\expndtw0\kerning0
+  \cf12 \expnd0\expndtw0\kerning0
+// 31\cf7 \expnd0\expndtw0\kerning0
+\
+\cf9 \expnd0\expndtw0\kerning0
+\}\cf7 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl420
+
+\f1\fs24 \cf2 \cb1 \expnd0\expndtw0\kerning0
+At the top level of programs and functions, let, unlike var, doesn\'92t create a property on the global object. \
+\pard\pardeftab720\sl420
+
+\f2\fs28 \cf5 \cb6 \expnd0\expndtw0\kerning0
+var\cf7 \expnd0\expndtw0\kerning0
+ x \cf8 \cb1 \expnd0\expndtw0\kerning0
+=\cf7 \cb6 \expnd0\expndtw0\kerning0
+ \cf22 \expnd0\expndtw0\kerning0
+'global'\cf9 \expnd0\expndtw0\kerning0
+;\cf7 \expnd0\expndtw0\kerning0
+\
+\cf5 \expnd0\expndtw0\kerning0
+let\cf7 \expnd0\expndtw0\kerning0
+ y \cf8 \cb1 \expnd0\expndtw0\kerning0
+=\cf7 \cb6 \expnd0\expndtw0\kerning0
+ \cf22 \expnd0\expndtw0\kerning0
+'global'\cf9 \expnd0\expndtw0\kerning0
+;\cf7 \expnd0\expndtw0\kerning0
+\
+console\cf9 \expnd0\expndtw0\kerning0
+.\cf11 \expnd0\expndtw0\kerning0
+log\cf9 \expnd0\expndtw0\kerning0
+(\cf5 \expnd0\expndtw0\kerning0
+this\cf9 \expnd0\expndtw0\kerning0
+.\cf7 \expnd0\expndtw0\kerning0
+x\cf9 \expnd0\expndtw0\kerning0
+); //global\cf7 \expnd0\expndtw0\kerning0
+\
+console\cf9 \expnd0\expndtw0\kerning0
+.\cf11 \expnd0\expndtw0\kerning0
+log\cf9 \expnd0\expndtw0\kerning0
+(\cf5 \expnd0\expndtw0\kerning0
+this\cf9 \expnd0\expndtw0\kerning0
+.\cf7 \expnd0\expndtw0\kerning0
+y\cf9 \expnd0\expndtw0\kerning0
+); //undefined\cf7 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl420
+
+\f1\fs24 \cf2 \cb1 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl420
+
+\b\fs28 \cf2 \expnd0\expndtw0\kerning0
+Running Mongod on terminal 
+\b0\fs24 \expnd0\expndtw0\kerning0
+\
+run this first 
+\f2\fs26 \cf26 \cb27 \expnd0\expndtw0\kerning0
+brew services start mongodb\
+\pard\pardeftab720\sl420
+
+\f1\fs24 \cf2 \cb1 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl420
+
+\b\fs28 \cf2 \expnd0\expndtw0\kerning0
+Working With Mongo Shell
+\b0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl480
+
+\fs32 \cf28 \expnd0\expndtw0\kerning0
+To display the database you are using, type 
+\f8 \cf0 \expnd0\expndtw0\kerning0
+db
+\f1 \cf28 \expnd0\expndtw0\kerning0
+:
+\fs24 \cf2 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl420
+
+\f2\fs26 \cf26 \cb27 \expnd0\expndtw0\kerning0
+db\
+
+\f1\fs24 \cf2 \cb1 \expnd0\expndtw0\kerning0
+To Switch databases\
+use <database>  //it will create the <database> if nothing exist with same name\
+\
+use myNewDatabase   //create or switch to myNewDatabase\
+db.mycollection.insert(\{x:1\});   // db refers to the current database (myCollection)\
+					//myCollection is the name of the collection created \
+\
+
+\b May 30th, 2016\
+Promises in JavaScript\
+
+\b0 A promise represents the eventual result of an asynchronous operation. The primary way to interact with promise is through its then method, which registers 
+\b callbacks
+\b0  to receive either a promise\'92s eventual value or the reason why the promise can\'92t be fulfilled. (promise is an object/function with a 
+\b then
+\b0  method)\
+\
+\cf29 Promise States\
+\cf2 A promise must be in one of the following 3 states: pending, fulfilled or rejected. \
+1. When pending, a promise: may transition to either the fulfilled or rejected state.\
+2. When fulfilled, a promise: \
+	-must not transition to any other state.\
+	-must have a value, which must not change.\
+3. When rejected, a promise:\
+	-must not transition to any other state.\
+	-must have a reason, which must not change. \
+\
+\cf30 The 
+\b then
+\b0  Method\
+\cf0 -A promise must provide a then method to access its current or eventual value or reason of rejected state. \
+-then method accepts two arguments: \
+
+\b \cf14 promise.then(onFulfilled, onRejected)
+\b0 \
+\cf0 1.Both onFulfilled and onRejected are optional arguments.\
+	-if onFulfilled or onRejected are not functions, they can be ignored\
+\cf14 2. if onFulfilled is a function \
+	\cf0 -it must be called after promise is fulfilled, with promise\'92s value as it\'92s first argument.\
+	-it must not be called before promise is fulfilled.\
+	-it must not be called more than once.\
+3. if onRejected is a function \
+	\expnd0\expndtw0\kerning0
+-it must be called after promise is rejected, with promise\'92s reason as it\'92s first argument.\
+	-it must not be called before promise is rejected.\
+	-it must not be called more than once.\expnd0\expndtw0\kerning0
+\
+\cf14 \
+\
+
+\b JUNE 1st
+\b0 \
+
+\b \cf0 Android Development
+\b0 \cf14 \
+\cf0 Grade is a build system. It takes all the source files (.java or .xml), then applies the appropriate tool and groups all of them into one \
+compressed file called 
+\b APK
+\b0 (android package kit)\cf14 \
+\
+\pard\pardeftab720\sl420
+
+\f9\fs28 \cf31 \cb32 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec31 Android is based on Linux with a set of native core C/C++ libraries. Android applications are written in Java. However, they run on Android's own Java Virtual Machine, called 
+\b Dalvik Virtual Machine
+\b0  (DVM) (instead of JDK's JVM) which is optimised to operate on the mobile devices.\
+\
+To improve the performance, the XML files are compiled into binary using the Android Asset Packaging Tool (aapt). The devices store them as binary, and the file is read in binary, instead of converting back to XML, for efficiency.\
+\
+\
+
+\b The Steps in writing a java program: 
+\b0 \
+\pard\pardeftab720\sl420\sa112\qj
+
+\b\fs30 \cf33 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec33 Step 1:
+\b0\fs28 \cf31 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec31  Write the source codes (
+\f2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 .java
+\f9 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 ) using a programming text editor (such as Notepad++, Textpad, gEdit) or an IDE (such as Eclipse or NetBeans).\
+
+\b\fs30 \cf33 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec33 Step 2:
+\b0\fs28 \cf31 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec31  Compile the source codes (
+\f2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 .java
+\f9 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 ) into Java portable bytecode (
+\f2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 .class
+\f9 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 ) using the JDK compiler ("
+\f2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 javac
+\f9 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 ").\
+
+\b\fs30 \cf33 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec33 Step 3:
+\b0\fs28 \cf31 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec31  Run the compiled bytecode (
+\f2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 .class
+\f9 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 ) with the input to produce the desired output, using the Java Runtime ("
+\f2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 java
+\f9 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 ").\
+\pard\pardeftab720\sl420
+\cf31 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\b Polymorphism
+\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl420\sa112\qj
+\ls5\ilvl0\cf31 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec31 If a subclass instance is assign to a superclass reference, you can invoke the methods defined in the superclass only. You cannot invoke methods defined in the subclass.\cb1 \
+\ls5\ilvl0\cb32 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec31 However, the substituted instance retains its own identity in terms of overridden methods and hiding variables. If the subclass overrides methods in the superclass, the subclass's version will be executed, instead of the superclass's version.\cb1 \
+\pard\pardeftab720\sl420
+
+\f1\fs24 \cf14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl420
+\cf2 \
+\pard\pardeftab720\sl420
+\cf34 \expnd0\expndtw0\kerning0
+FrontEnd development libraries and frameworks \cf2 \expnd0\expndtw0\kerning0
+\
+Backbone\
+React\
+LESS\
+SASS\
+knockout\
+Ember\
+Ext \
+CanJS\
+D3.js\
+}
