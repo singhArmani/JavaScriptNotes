@@ -2,15 +2,16 @@
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 Consolas;
 \f3\fnil\fcharset0 Menlo-Bold;\f4\fnil\fcharset0 Menlo-Regular;\f5\fmodern\fcharset0 Courier;
 \f6\fnil\fcharset0 Consolas-Bold;\f7\fnil\fcharset0 Consolas-Italic;\f8\fnil\fcharset0 SourceCodePro-Regular;
-\f9\fnil\fcharset0 Calibri;}
+\f9\fnil\fcharset0 Calibri;\f10\fswiss\fcharset0 ArialMT;\f11\fnil\fcharset0 Georgia;
+\f12\fnil\fcharset0 Verdana;}
 {\colortbl;\red255\green255\blue255;\red26\green26\blue26;\red38\green38\blue38;\red246\green246\blue246;
 \red12\green99\blue153;\red249\green250\blue251;\red60\green61\blue65;\red148\green108\blue71;\red135\green135\blue135;
 \red133\green0\blue67;\red210\green50\blue85;\red93\green108\blue125;\red217\green11\blue0;\red0\green45\blue153;
 \red0\green61\blue204;\red0\green0\blue194;\red146\green26\blue32;\red15\green112\blue1;\red164\green8\blue0;
 \red0\green68\blue254;\red213\green221\blue228;\red85\green138\blue3;\red100\green70\blue0;\red50\green44\blue65;
 \red16\green129\blue213;\red27\green29\blue31;\red235\green236\blue237;\red57\green55\blue55;\red134\green19\blue62;
-\red100\green14\blue47;\red0\green0\blue0;\red255\green255\blue255;\red52\green52\blue52;\red206\green233\blue201;
-\red255\green39\blue18;\red255\green83\blue8;}
+\red100\green14\blue47;\red52\green52\blue52;\red206\green233\blue201;\red255\green39\blue18;\red255\green83\blue8;
+\red66\green66\blue66;\red19\green8\blue105;\red46\green111\blue253;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
 {\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
 {\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
@@ -18,7 +19,7 @@
 {\list\listtemplateid5\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid401\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid5}
 {\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}}
-\paperw11900\paperh16840\margl1440\margr1440\vieww15340\viewh13220\viewkind0
+\paperw11900\paperh16840\margl1440\margr1440\vieww17540\viewh13220\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 
 \f0\b\fs24 \cf0 \
@@ -96,7 +97,7 @@ function, but we can retrieve the current user\'92s ID with
 \f2 \cf3 \cb4 \expnd0\expndtw0\kerning0
 this.userId\
 \pard\tx566\pardeftab720
-\cf3 \expnd0\expndtw0\kerning0
+\cf3 \cb4 \expnd0\expndtw0\kerning0
 \
 \pard\tx566\pardeftab720
 
@@ -232,7 +233,8 @@ var\cf0 \expnd0\expndtw0\kerning0
 \f1\fs24 \cf2 \expnd0\expndtw0\kerning0
 \
 \pard\pardeftab720
-\cf2 \
+\cf2 \expnd0\expndtw0\kerning0
+\
 
 \b What is a Callback Function or Higher-order function\
 
@@ -257,7 +259,8 @@ alert(\'93btn clicked\'94);\
 var friends = [\'93Mike\'94,\'94Stacy\'94,\'94Andy\'94];\
 \
 \
-friends.forEach(\cf19 function(eachName,index)\{\
+friends.forEach(\cf19 \expnd0\expndtw0\kerning0
+function(eachName,index)\{\
 console.log(index+1+\'94.\'94+eachName);\
 \}\cf0 \expnd0\expndtw0\kerning0
 )\cf2 \expnd0\expndtw0\kerning0
@@ -545,18 +548,25 @@ Templates(Meteor)
 \
 
 \b0 \cf23 \expnd0\expndtw0\kerning0
-Template.myTemplate.events(eventMap) \cf0 \
+Template.myTemplate.events(eventMap) \cf0 \expnd0\expndtw0\kerning0
+\
 //myTemplate == your own template in the html file \
 //eventMap = argument is of type Event Map.. (looks similar to object though like in helpers)\
 \
-\cf23 Template.myTemplate.helpers(helpers)\cf0 \
+\cf23 \expnd0\expndtw0\kerning0
+Template.myTemplate.helpers(helpers)\cf0 \expnd0\expndtw0\kerning0
+\
 //helpers = argument, and is a object .. key is the name of the function and value is the function associated\
 \
-\cf23 Template.myTemplate.onRendered \cf0 \
+\cf23 \expnd0\expndtw0\kerning0
+Template.myTemplate.onRendered \cf0 \expnd0\expndtw0\kerning0
+\
 //Register a function  to be called when an instance of template is inserted into the DOM.\
 //Arguments: a callback \
 \
-\cf23 Template.myTemplate.onCreated \cf0 \
+\cf23 \expnd0\expndtw0\kerning0
+Template.myTemplate.onCreated \cf0 \expnd0\expndtw0\kerning0
+\
 //Register a function  to be called when an instance of template is created.\
 //Arguments : a callback \
 \pard\pardeftab720\sl416
@@ -568,12 +578,14 @@ These callbacks(the arguments of onCreated) fire once and are the first group of
 \
 \pard\pardeftab720
 \cf23 \expnd0\expndtw0\kerning0
-Template.myTemplate.onDestroy \cf0 \
+Template.myTemplate.onDestroy \cf0 \expnd0\expndtw0\kerning0
+\
 //Register a function  to be called when an instance of template is removed from the DOM.\
 //Arguments: a callback \
 \
 
-\b\fs26 \cf20 Template instances\
+\b\fs26 \cf20 \expnd0\expndtw0\kerning0
+Template instances\
 \pard\pardeftab720\sl416
 
 \b0\fs24 \cf3 \expnd0\expndtw0\kerning0
@@ -591,7 +603,9 @@ Template.instance()}}.\
 
 \b0 \cf23 \expnd0\expndtw0\kerning0
 template.subscribe(name,[arg1,agree,..],[options])\
-\cf0 name is the name of subscription. Matches the name of the server\'92s publish() call. \
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+name is the name of subscription. Matches the name of the server\'92s publish() call. \
 template is the how would you get hold of template instance. read above section . \
 \pard\pardeftab720\sl416
 \cf3 \expnd0\expndtw0\kerning0
@@ -601,10 +615,13 @@ onCreated}} callback to specify which data publications this template depends on
 \pard\pardeftab720
 \cf0 \expnd0\expndtw0\kerning0
 \
+\pard\pardeftab720
 
-\b\fs26 \cf20 Reactivity(Meteor)\
+\b\fs26 \cf20 \expnd0\expndtw0\kerning0
+Reactivity(Meteor)\
 
-\b0\fs24 \cf23 Reactive Sources\
+\b0\fs24 \cf23 \expnd0\expndtw0\kerning0
+Reactive Sources\
 \pard\pardeftab720
 \cf24 \expnd0\expndtw0\kerning0
 Making a JavaScript object 
@@ -628,8 +645,9 @@ whenever a reactive data source inside it changes
 \i0 \expnd0\expndtw0\kerning0
 .\
 \
+\pard\pardeftab720
 
-\b\fs26 \expnd0\expndtw0\kerning0
+\b\fs26 \cf24 \expnd0\expndtw0\kerning0
 May11
 \b0\fs24 \cf2 \expnd0\expndtw0\kerning0
 \
@@ -841,6 +859,7 @@ db
 
 \f2\fs26 \cf26 \cb27 \expnd0\expndtw0\kerning0
 db\
+\pard\pardeftab720\sl420
 
 \f1\fs24 \cf2 \cb1 \expnd0\expndtw0\kerning0
 To Switch databases\
@@ -850,18 +869,30 @@ use myNewDatabase   //create or switch to myNewDatabase\
 db.mycollection.insert(\{x:1\});   // db refers to the current database (myCollection)\
 					//myCollection is the name of the collection created \
 \
+\pard\pardeftab720\sl420
 
-\b May 30th, 2016\
+\b \cf2 \expnd0\expndtw0\kerning0
+May 30th, 2016\
 Promises in JavaScript\
+\pard\pardeftab720\sl420
 
-\b0 A promise represents the eventual result of an asynchronous operation. The primary way to interact with promise is through its then method, which registers 
-\b callbacks
-\b0  to receive either a promise\'92s eventual value or the reason why the promise can\'92t be fulfilled. (promise is an object/function with a 
-\b then
-\b0  method)\
+\b0 \cf2 \expnd0\expndtw0\kerning0
+A promise represents the eventual result of an asynchronous operation. The primary way to interact with promise is through its then method, which registers 
+\b \expnd0\expndtw0\kerning0
+callbacks
+\b0 \expnd0\expndtw0\kerning0
+ to receive either a promise\'92s eventual value or the reason why the promise can\'92t be fulfilled. (promise is an object/function with a 
+\b \expnd0\expndtw0\kerning0
+then
+\b0 \expnd0\expndtw0\kerning0
+ method)\
 \
-\cf29 Promise States\
-\cf2 A promise must be in one of the following 3 states: pending, fulfilled or rejected. \
+\pard\pardeftab720\sl420
+\cf29 \expnd0\expndtw0\kerning0
+Promise States\
+\pard\pardeftab720\sl420
+\cf2 \expnd0\expndtw0\kerning0
+A promise must be in one of the following 3 states: pending, fulfilled or rejected. \
 1. When pending, a promise: may transition to either the fulfilled or rejected state.\
 2. When fulfilled, a promise: \
 	-must not transition to any other state.\
@@ -870,7 +901,9 @@ Promises in JavaScript\
 	-must not transition to any other state.\
 	-must have a reason, which must not change. \
 \
-\cf30 The 
+\pard\pardeftab720\sl420
+\cf30 \expnd0\expndtw0\kerning0
+The 
 \b then
 \b0  Method\
 \cf0 -A promise must provide a then method to access its current or eventual value or reason of rejected state. \
@@ -885,28 +918,31 @@ Promises in JavaScript\
 	-it must not be called before promise is fulfilled.\
 	-it must not be called more than once.\
 3. if onRejected is a function \
-	\expnd0\expndtw0\kerning0
--it must be called after promise is rejected, with promise\'92s reason as it\'92s first argument.\
+	-it must be called after promise is rejected, with promise\'92s reason as it\'92s first argument.\
 	-it must not be called before promise is rejected.\
-	-it must not be called more than once.\expnd0\expndtw0\kerning0
-\
+	-it must not be called more than once.\
 \cf14 \
-\
 
-\b JUNE 1st
+\b UNE 1st
 \b0 \
+\pard\pardeftab720\sl420
 
-\b \cf0 Android Development
-\b0 \cf14 \
+\b \cf0 \expnd0\expndtw0\kerning0
+Android Development
+\b0 \cf14 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl420
 \cf0 Grade is a build system. It takes all the source files (.java or .xml), then applies the appropriate tool and groups all of them into one \
 compressed file called 
-\b APK
-\b0 (android package kit)\cf14 \
+\b \expnd0\expndtw0\kerning0
+APK
+\b0 \expnd0\expndtw0\kerning0
+(android package kit)\cf14 \
 \
 \pard\pardeftab720\sl420
 
-\f9\fs28 \cf31 \cb32 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec31 Android is based on Linux with a set of native core C/C++ libraries. Android applications are written in Java. However, they run on Android's own Java Virtual Machine, called 
+\f9\fs28 \cf0 \expnd0\expndtw0\kerning0
+Android is based on Linux with a set of native core C/C++ libraries. Android applications are written in Java. However, they run on Android's own Java Virtual Machine, called 
 \b Dalvik Virtual Machine
 \b0  (DVM) (instead of JDK's JVM) which is optimised to operate on the mobile devices.\
 \
@@ -918,187 +954,775 @@ To improve the performance, the XML files are compiled into binary using the And
 \b0 \
 \pard\pardeftab720\sl420\sa112\qj
 
-\b\fs30 \cf33 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec33 Step 1:
-\b0\fs28 \cf31 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec31  Write the source codes (
+\b\fs30 \cf31 \expnd0\expndtw0\kerning0
+Step 1:
+\b0\fs28 \cf0 \expnd0\expndtw0\kerning0
+ Write the source codes (
 \f2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 .java
+.java
 \f9 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ) using a programming text editor (such as Notepad++, Textpad, gEdit) or an IDE (such as Eclipse or NetBeans).\
+) using a programming text editor (such as Notepad++, Textpad, gEdit) or an IDE (such as Eclipse or NetBeans).\
 
-\b\fs30 \cf33 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec33 Step 2:
-\b0\fs28 \cf31 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec31  Compile the source codes (
+\b\fs30 \cf31 \expnd0\expndtw0\kerning0
+Step 2:
+\b0\fs28 \cf0 \expnd0\expndtw0\kerning0
+ Compile the source codes (
 \f2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 .java
+.java
 \f9 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ) into Java portable bytecode (
+) into Java portable bytecode (
 \f2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 .class
+.class
 \f9 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ) using the JDK compiler ("
+) using the JDK compiler ("
 \f2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 javac
+javac
 \f9 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ").\
+").\
 
-\b\fs30 \cf33 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec33 Step 3:
-\b0\fs28 \cf31 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec31  Run the compiled bytecode (
+\b\fs30 \cf31 \expnd0\expndtw0\kerning0
+Step 3:
+\b0\fs28 \cf0 \expnd0\expndtw0\kerning0
+ Run the compiled bytecode (
 \f2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 .class
+.class
 \f9 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ) with the input to produce the desired output, using the Java Runtime ("
+) with the input to produce the desired output, using the Java Runtime ("
 \f2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 java
+java
 \f9 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ").\
+").\
 \pard\pardeftab720\sl420
-\cf31 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
+\cf0 \expnd0\expndtw0\kerning0
+\
+
+\b Method toString()\
+
+\b0 Every well-designed Java class should have a 
+\f2 \expnd0\expndtw0\kerning0
+public
+\f9 \expnd0\expndtw0\kerning0
+ method called 
+\f2 \expnd0\expndtw0\kerning0
+toString()
+\f9 \expnd0\expndtw0\kerning0
+ that returns a 
+\f2 \expnd0\expndtw0\kerning0
+string
+\f9 \expnd0\expndtw0\kerning0
+ description of 
+\f2 \expnd0\expndtw0\kerning0
+this
+\f9 \expnd0\expndtw0\kerning0
+ instance. You can invoke the 
+\f2 \expnd0\expndtw0\kerning0
+toString()
+\f9 \expnd0\expndtw0\kerning0
+ method explicitly by calling 
+\f7\i \expnd0\expndtw0\kerning0
+anInstanceName
+\f2\i0 \expnd0\expndtw0\kerning0
+.toString()
+\f9 \expnd0\expndtw0\kerning0
+, or implicitly via 
+\f2 \expnd0\expndtw0\kerning0
+println()
+\f9 \expnd0\expndtw0\kerning0
+ or 
+\f2 \expnd0\expndtw0\kerning0
+String
+\f9 \expnd0\expndtw0\kerning0
+ concatenation operator 
+\f2 \expnd0\expndtw0\kerning0
+'+'
+\f9 \expnd0\expndtw0\kerning0
+. That is, running 
+\f2 \expnd0\expndtw0\kerning0
+println(
+\f7\i \expnd0\expndtw0\kerning0
+anInstance
+\f2\i0 \expnd0\expndtw0\kerning0
+)
+\f9 \expnd0\expndtw0\kerning0
+ invokes the 
+\f2 \expnd0\expndtw0\kerning0
+toString()
+\f9 \expnd0\expndtw0\kerning0
+ method of that instance implicitly.\
+\
 
 \b Polymorphism
 \b0 \
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sl420\sa112\qj
-\ls5\ilvl0\cf31 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec31 If a subclass instance is assign to a superclass reference, you can invoke the methods defined in the superclass only. You cannot invoke methods defined in the subclass.\cb1 \
-\ls5\ilvl0\cb32 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec31 However, the substituted instance retains its own identity in terms of overridden methods and hiding variables. If the subclass overrides methods in the superclass, the subclass's version will be executed, instead of the superclass's version.\cb1 \
+\ls5\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+If a subclass instance is assign to a superclass reference, you can invoke the methods defined in the superclass only. You cannot invoke methods defined in the subclass.\
+\ls5\ilvl0\kerning1\expnd0\expndtw0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+However, the substituted instance retains its own identity in terms of overridden methods and hiding variables. If the subclass overrides methods in the superclass, the subclass's version will be executed, instead of the superclass's version.\
 \pard\pardeftab720\sl420
 
 \b \cf0 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 Abstract Classes and Interfaces\
+Abstract Classes and Interfaces\
 
-\b0 \cf31 \cb32 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec31 An 
+\b0 An 
 \f2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 abstract
+abstract
 \f9 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0  method is a method with only signature (i.e., the method name, the list of arguments and the return type) without implementation (i.e., the method\'92s body). You use the keyword 
+ method is a method with only signature (i.e., the method name, the list of arguments and the return type) without implementation (i.e., the method\'92s body). You use the keyword 
 \f2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 abstract
+abstract
 \f9 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0  to declare an 
+ to declare an 
 \f2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 abstract
+abstract
 \f9 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0  method.\
+ method.\
 \
 \pard\pardeftab720\sl351\qj
 
-\f6\b\fs26 \cf31 \cb34 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 abstract
+\f6\b\fs26 \cf0 \cb32 \expnd0\expndtw0\kerning0
+abstract
 \f2\b0 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0  public class 
+ public class 
 \f6\b \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 Shape
+Shape
 \f2\b0 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0  \{\
+ \{\
    ......\
    ......\
    
 \f6\b \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 abstract
+abstract
 \f2\b0 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0  public double getArea();\
+ public double getArea();\
    
 \f6\b \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 abstract
+abstract
 \f2\b0 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0  public double getPerimeter();\
+ public double getPerimeter();\
    
 \f6\b \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 abstract
+abstract
 \f2\b0 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0  public void draw();\
+ public void draw();\
 \}\
 \pard\pardeftab720\sl420
 
 \f1\b\fs24 \cf0 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
+\
+\pard\pardeftab720\sl420
 
-\f9\b0\fs28 \cf31 \cb32 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec31 A 
-\b \cf13 class
-\b0 \cf31  containing one or more 
+\f9\b0\fs28 \cf0 \expnd0\expndtw0\kerning0
+A 
+\b \cf13 \expnd0\expndtw0\kerning0
+class
+\b0 \cf0 \expnd0\expndtw0\kerning0
+ containing one or more 
 \f2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 abstract
+abstract
 \f9 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0  methods is called an 
-\f6\b \cf35 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 abstract
-\f9\b0 \cf31 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0  class. An 
+ methods is called an 
+\f6\b \cf33 \expnd0\expndtw0\kerning0
+abstract
+\f9\b0 \cf0 \expnd0\expndtw0\kerning0
+ class. An 
 \f2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 abstract
+abstract
 \f9 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0  class must be declared with a class-modifier 
+ class must be declared with a class-modifier 
 \f2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 abstract
+abstract
 \f9 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 . An 
+. An 
 \f2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 abstract
+abstract
 \f9 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0  class CANNOT be instantiated, as its definition is not complete.\
+ class CANNOT be instantiated, as its definition is not complete.\
 \
 \pard\pardeftab720\sl420\sa112\qj
 
-\b\fs30 \cf36 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec33 Rule of Thumb\cf33 :
-\b0\fs28 \cf31 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec31  Program at the interface, not at the implementation. (That is, make references at the superclass; substitute with subclass instances; and invoke methods defined in the superclass only.)\
+\b\fs30 \cf34 \expnd0\expndtw0\kerning0
+Rule of Thumb\cf31 \expnd0\expndtw0\kerning0
+:
+\b0\fs28 \cf0 \expnd0\expndtw0\kerning0
+ Program at the interface, not at the implementation. (That is, make references at the superclass; substitute with subclass instances; and invoke methods defined in the superclass only.)\
 Notes:\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sl420\sa112\qj
-\ls6\ilvl0\cf31 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec31 An abstract method cannot be declared 
+\ls6\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+An abstract method cannot be declared 
 \f2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 final
+final
 \f9 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 , as 
+, as 
 \f2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 final
+final
 \f9 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0  method cannot be overridden. An 
+ method cannot be overridden. An 
 \f2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 abstract
+abstract
 \f9 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0  method, on the other hand, must be overridden in a descendant before it can be used.\cb1 \
-\ls6\ilvl0\cb32 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec31 An 
+ method, on the other hand, must be overridden in a descendant before it can be used.\
+\ls6\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+An 
 \f2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 abstract
+abstract
 \f9 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0  method cannot be 
+ method cannot be 
 \f2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 private
+private
 \f9 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0  (which generates a compilation error). This is because 
+ (which generates a compilation error). This is because 
 \f2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 private
+private
 \f9 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0  method are not visible to the subclass and thus cannot be overridden.\cb1 \
+ method are not visible to the subclass and thus cannot be overridden.\
 \pard\pardeftab720\sl420
 
 \f1\b\fs24 \cf0 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
+\
 \pard\pardeftab720\sl420
 
-\b0 \cf2 \
-\pard\pardeftab720\sl420
-\cf35 \expnd0\expndtw0\kerning0
-FrontEnd development libraries and frameworks \cf2 \expnd0\expndtw0\kerning0
+\fs28 \cf2 \expnd0\expndtw0\kerning0
+The Java Interface
+\fs24 \expnd0\expndtw0\kerning0
 \
-Backbone\
-React\
-LESS\
-SASS\
-knockout\
-Ember\
-Ext \
-CanJS\
-D3.js\
+\pard\pardeftab720\sl420\sa112\qj
+
+\f9\b0\fs28 \cf0 \expnd0\expndtw0\kerning0
+-A Java 
+\f2 \expnd0\expndtw0\kerning0
+interface
+\f9 \expnd0\expndtw0\kerning0
+ is a 
+\i \expnd0\expndtw0\kerning0
+100% abstract superclass
+\i0 \expnd0\expndtw0\kerning0
+ which define a set of methods its subclasses must support. An 
+\f2 \expnd0\expndtw0\kerning0
+interface
+\f9 \expnd0\expndtw0\kerning0
+ contains only 
+\f2 \expnd0\expndtw0\kerning0
+public
+\f9 \expnd0\expndtw0\kerning0
+ 
+\i \expnd0\expndtw0\kerning0
+abstract methods
+\i0 \expnd0\expndtw0\kerning0
+ (methods with signature and no implementation) and possibly 
+\i \expnd0\expndtw0\kerning0
+constants
+\i0 \expnd0\expndtw0\kerning0
+ (
+\f2 \expnd0\expndtw0\kerning0
+public
+\f9 \expnd0\expndtw0\kerning0
+ 
+\f2 \expnd0\expndtw0\kerning0
+static final
+\f9 \expnd0\expndtw0\kerning0
+ variables). You have to use the keyword "
+\f2 \expnd0\expndtw0\kerning0
+interface
+\f9 \expnd0\expndtw0\kerning0
+" to define an 
+\f2 \expnd0\expndtw0\kerning0
+interface
+\f9 \expnd0\expndtw0\kerning0
+ (instead of keyword "
+\f2 \expnd0\expndtw0\kerning0
+class
+\f9 \expnd0\expndtw0\kerning0
+" for normal classes). The keyword 
+\f2 \expnd0\expndtw0\kerning0
+public
+\f9 \expnd0\expndtw0\kerning0
+ and 
+\f2 \expnd0\expndtw0\kerning0
+abstract
+\f9 \expnd0\expndtw0\kerning0
+ are not needed for its abstract methods as they are mandatory.\
+-Similar to an 
+\f2 \expnd0\expndtw0\kerning0
+abstract
+\f9 \expnd0\expndtw0\kerning0
+ superclass, an 
+\f2 \expnd0\expndtw0\kerning0
+interface
+\f9 \expnd0\expndtw0\kerning0
+ cannot be instantiated. You have to create a "subclass" that implements an interface, and provide the actual implementation of all the 
+\f2 \expnd0\expndtw0\kerning0
+abstract
+\f9 \expnd0\expndtw0\kerning0
+ methods.\
+-Unlike a normal class, where you use the keyword "
+\f2 \expnd0\expndtw0\kerning0
+extends
+\f9 \expnd0\expndtw0\kerning0
+" to derive a subclass. For interface, we use the keyword "
+\f2 \expnd0\expndtw0\kerning0
+implements
+\f9 \expnd0\expndtw0\kerning0
+" to derive a subclass.\
+-An interface is a 
+\i \expnd0\expndtw0\kerning0
+contract
+\i0 \expnd0\expndtw0\kerning0
+ for what the classes can do. It, however, does not specify how the classes should do it.\
+-An interface provides a 
+\i \expnd0\expndtw0\kerning0
+form
+\i0 \expnd0\expndtw0\kerning0
+, a 
+\i \expnd0\expndtw0\kerning0
+protocol
+\i0 \expnd0\expndtw0\kerning0
+, a 
+\i \expnd0\expndtw0\kerning0
+standard
+\i0 \expnd0\expndtw0\kerning0
+, a 
+\i \expnd0\expndtw0\kerning0
+contract
+\i0 \expnd0\expndtw0\kerning0
+, a 
+\i \expnd0\expndtw0\kerning0
+specification
+\i0 \expnd0\expndtw0\kerning0
+, a set of 
+\i \expnd0\expndtw0\kerning0
+rules
+\i0 \expnd0\expndtw0\kerning0
+, an 
+\i \expnd0\expndtw0\kerning0
+interface
+\i0 \expnd0\expndtw0\kerning0
+, for all objects that implement it. It is a 
+\i \expnd0\expndtw0\kerning0
+specification
+\i0 \expnd0\expndtw0\kerning0
+ and 
+\i \expnd0\expndtw0\kerning0
+rules
+\i0 \expnd0\expndtw0\kerning0
+ that any object implementing it agrees to follow.\
+All methods in an interface shall be 
+\f2 \expnd0\expndtw0\kerning0
+public
+\f9 \expnd0\expndtw0\kerning0
+ and 
+\f2 \expnd0\expndtw0\kerning0
+abstract
+\f9 \expnd0\expndtw0\kerning0
+ (default). You cannot use other access modifier such as 
+\f2 \expnd0\expndtw0\kerning0
+private
+\f9 \expnd0\expndtw0\kerning0
+, 
+\f2 \expnd0\expndtw0\kerning0
+protected
+\f9 \expnd0\expndtw0\kerning0
+ and default, or modifiers such as 
+\f2 \expnd0\expndtw0\kerning0
+static
+\f9 \expnd0\expndtw0\kerning0
+, 
+\f2 \expnd0\expndtw0\kerning0
+final
+\f9 \expnd0\expndtw0\kerning0
+.\
+All fields shall be 
+\f2 \expnd0\expndtw0\kerning0
+public
+\f9 \expnd0\expndtw0\kerning0
+, 
+\f2 \expnd0\expndtw0\kerning0
+static
+\f9 \expnd0\expndtw0\kerning0
+ and 
+\f2 \expnd0\expndtw0\kerning0
+final
+\f9 \expnd0\expndtw0\kerning0
+ (default).\
+\
+\pard\pardeftab720\sl420\sa112\qj
+
+\b \cf0 \expnd0\expndtw0\kerning0
+Static variable/methods as Class variable/methods\
+\pard\pardeftab720\sl420
+
+\b0 \cf0 \expnd0\expndtw0\kerning0
+A 
+\f2 \expnd0\expndtw0\kerning0
+static
+\f9 \expnd0\expndtw0\kerning0
+ method can access only 
+\f2 \expnd0\expndtw0\kerning0
+static
+\f9 \expnd0\expndtw0\kerning0
+ variables/methods. It cannot access non-
+\f2 \expnd0\expndtw0\kerning0
+static
+\f9 \expnd0\expndtw0\kerning0
+ variables/methods. On the other hand, an instance method can access 
+\f2 \expnd0\expndtw0\kerning0
+static
+\f9 \expnd0\expndtw0\kerning0
+ and non-
+\f2 \expnd0\expndtw0\kerning0
+static
+\f9 \expnd0\expndtw0\kerning0
+ variables/methods.\
+\pard\pardeftab720\sl420\sa112\qj
+\cf0 \expnd0\expndtw0\kerning0
+\
+-\cf15 \expnd0\expndtw0\kerning0
+In Java, 
+\f2 \expnd0\expndtw0\kerning0
+abstract
+\f9 \expnd0\expndtw0\kerning0
+ class and 
+\f2 \expnd0\expndtw0\kerning0
+interface
+\f9 \expnd0\expndtw0\kerning0
+ are used to separate the public 
+\i \cf13 \expnd0\expndtw0\kerning0
+interface
+\i0 \cf15 \expnd0\expndtw0\kerning0
+ of a class from its 
+\i \cf13 \expnd0\expndtw0\kerning0
+implementation
+\i0 \cf15 \expnd0\expndtw0\kerning0
+ so as to allow the programmer to program at the 
+\i \expnd0\expndtw0\kerning0
+interface
+\i0 \expnd0\expndtw0\kerning0
+ instead of the various 
+\i \expnd0\expndtw0\kerning0
+implementation
+\i0 \expnd0\expndtw0\kerning0
+.\
+\
+\
+\pard\pardeftab720\sl420\sa112\qj
+
+\b \cf0 \expnd0\expndtw0\kerning0
+Why public static main \
+\pard\pardeftab720\sl420
+
+\b0 \cf0 \expnd0\expndtw0\kerning0
+The 
+\f2 \expnd0\expndtw0\kerning0
+main()
+\f9 \expnd0\expndtw0\kerning0
+ method is declared 
+\f2 \expnd0\expndtw0\kerning0
+static
+\f9 \expnd0\expndtw0\kerning0
+. Remember that a 
+\f2 \expnd0\expndtw0\kerning0
+static
+\f9 \expnd0\expndtw0\kerning0
+ variable/method belongs to the 
+\i \expnd0\expndtw0\kerning0
+class
+\i0 \expnd0\expndtw0\kerning0
+ instead of a particular 
+\i \expnd0\expndtw0\kerning0
+instance
+\i0 \expnd0\expndtw0\kerning0
+. There is no need to create an instance to use a 
+\f2 \expnd0\expndtw0\kerning0
+static
+\f9 \expnd0\expndtw0\kerning0
+ variable/method. A
+\f2 \expnd0\expndtw0\kerning0
+static
+\f9 \expnd0\expndtw0\kerning0
+ method can be invoked via the classname, in the form of 
+\f7\i \expnd0\expndtw0\kerning0
+ClassName.aStaticMethod
+\f2\i0 \expnd0\expndtw0\kerning0
+()
+\f9 \expnd0\expndtw0\kerning0
+. JRE can invoke the 
+\f2 \expnd0\expndtw0\kerning0
+static main()
+\f9 \expnd0\expndtw0\kerning0
+ method, by calling 
+\f2 \expnd0\expndtw0\kerning0
+Hello.main()
+\f9 \expnd0\expndtw0\kerning0
+ from the class directly. Note that we did not create any instance of the 
+\f2 \expnd0\expndtw0\kerning0
+Hello
+\f9 \expnd0\expndtw0\kerning0
+ class.\
+\pard\pardeftab720\sl420
+
+\f1\fs24 \cf14 \expnd0\expndtw0\kerning0
+\
+\
+\
+
+\b\fs28 JSX- 
+\fs24 \
+
+\f10\b0 \cf35 \expnd0\expndtw0\kerning0
+ is a JavaScript syntax extension that looks similar to XML.\
+\pard\pardeftab720\sl264\slmult1
+\cf0 \kerning1\expnd0\expndtw0 "JSX is not meant to be compiled at runtime. Though there is a JSX transformer that  converts JSX to JavaScript in a browser. Using it to compile JSX at runtime in the browser would slow down our application. We will use tools such as Babel, which is a JavaScript transpiler to convert our JSX code to the native JavaScript code before  deploying the application."
+\f1 \cf14 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl420
+\cf14 \expnd0\expndtw0\kerning0
+\
+\
+\
+
+\b Really Simple HTTP Server with Python
+\b0 \
+\pard\pardeftab720\sl416\sa240
+
+\f11 \cf0 \expnd0\expndtw0\kerning0
+Open up a terminal and type:\
+\pard\pardeftab720\sl325
+
+\f5 \cf36 \expnd0\expndtw0\kerning0
+$ \cf18 \expnd0\expndtw0\kerning0
+cd\cf0 \expnd0\expndtw0\kerning0
+ /home/somedir\
+\cf36 \expnd0\expndtw0\kerning0
+$ \cf0 \expnd0\expndtw0\kerning0
+python -m SimpleHTTPServer\
+\pard\pardeftab720\sl416\sa240
+
+\f11 \cf0 \expnd0\expndtw0\kerning0
+That's it! Now your http server will start in port 8000. You will get the message:\
+\pard\pardeftab720\sl325
+
+\f5 \cf0 \expnd0\expndtw0\kerning0
+Serving HTTP on 0.0.0.0 port 8000 ...\
+\pard\pardeftab720\sl416\sa240
+
+\f11 \cf0 \expnd0\expndtw0\kerning0
+Now open a browser and type the following address:\
+\pard\pardeftab720\sl325
+
+\f5 \cf0 \expnd0\expndtw0\kerning0
+http://192.168.1.2:8000\
+\pard\pardeftab720\sl416\sa240
+
+\f11 \cf0 \expnd0\expndtw0\kerning0
+You can also access it via:\
+\pard\pardeftab720\sl325
+
+\f5 \cf0 \expnd0\expndtw0\kerning0
+http://127.0.0.1:8000\
+\pard\pardeftab720\sl420
+
+\f1 \cf14 \expnd0\expndtw0\kerning0
+\
+
+\b E6 Javascript Syntax.. Object Destructuring
+\b0 \
+ 
+\f2\fs28 \cf5 \cb6 \expnd0\expndtw0\kerning0
+var\cf7 \expnd0\expndtw0\kerning0
+ o \cf8 \cb1 \expnd0\expndtw0\kerning0
+=\cf7 \cb6 \expnd0\expndtw0\kerning0
+ \cf9 \expnd0\expndtw0\kerning0
+\{\cf7 \expnd0\expndtw0\kerning0
+p\cf9 \expnd0\expndtw0\kerning0
+:\cf7 \expnd0\expndtw0\kerning0
+ \cf10 \expnd0\expndtw0\kerning0
+42\cf9 \expnd0\expndtw0\kerning0
+,\cf7 \expnd0\expndtw0\kerning0
+ q\cf9 \expnd0\expndtw0\kerning0
+:\cf7 \expnd0\expndtw0\kerning0
+ \cf5 \expnd0\expndtw0\kerning0
+true\cf9 \expnd0\expndtw0\kerning0
+\};\cf7 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl420
+\cf5 \expnd0\expndtw0\kerning0
+var\cf7 \expnd0\expndtw0\kerning0
+ \cf9 \expnd0\expndtw0\kerning0
+\{\cf7 \expnd0\expndtw0\kerning0
+p\cf9 \expnd0\expndtw0\kerning0
+,\cf7 \expnd0\expndtw0\kerning0
+ q\cf9 \expnd0\expndtw0\kerning0
+\}\cf7 \expnd0\expndtw0\kerning0
+ \cf8 \cb1 \expnd0\expndtw0\kerning0
+=\cf7 \cb6 \expnd0\expndtw0\kerning0
+ o\cf9 \expnd0\expndtw0\kerning0
+;\cf7 \expnd0\expndtw0\kerning0
+\
+//p and q should be same as in the key of assigned object.\
+console\cf9 \expnd0\expndtw0\kerning0
+.\cf11 \expnd0\expndtw0\kerning0
+log\cf9 \expnd0\expndtw0\kerning0
+(\cf7 \expnd0\expndtw0\kerning0
+p\cf9 \expnd0\expndtw0\kerning0
+);\cf7 \expnd0\expndtw0\kerning0
+ \cf12 \expnd0\expndtw0\kerning0
+// 42\cf7 \expnd0\expndtw0\kerning0
+\
+console\cf9 \expnd0\expndtw0\kerning0
+.\cf11 \expnd0\expndtw0\kerning0
+log\cf9 \expnd0\expndtw0\kerning0
+(\cf7 \expnd0\expndtw0\kerning0
+q\cf9 \expnd0\expndtw0\kerning0
+);\cf7 \expnd0\expndtw0\kerning0
+ \cf12 \expnd0\expndtw0\kerning0
+// true\cf7 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl420
+
+\f1\fs24 \cf14 \cb1 \expnd0\expndtw0\kerning0
+\
+
+\b Spread Operator 
+\b0 \cf2 \expnd0\expndtw0\kerning0
+\
+\
+\pard\pardeftab720\sl420
+
+\f10\fs28 \cf7 \expnd0\expndtw0\kerning0
+The 
+\b \expnd0\expndtw0\kerning0
+spread operator
+\b0 \expnd0\expndtw0\kerning0
+ allows an expression to be expanded in places where multiple arguments (for function calls) or multiple elements (for array literals) or multiple variables\'a0 (for\'a0destructuring assignment)\'a0are expected.
+\f1\fs24 \cf2 \expnd0\expndtw0\kerning0
+\
+\
+\pard\pardeftab720\sl420
+
+\f2\fs28 \cf5 \cb6 \expnd0\expndtw0\kerning0
+function\cf7 \expnd0\expndtw0\kerning0
+ \cf11 \expnd0\expndtw0\kerning0
+myFunction\cf9 \expnd0\expndtw0\kerning0
+(\cf7 \expnd0\expndtw0\kerning0
+x\cf9 \expnd0\expndtw0\kerning0
+,\cf7 \expnd0\expndtw0\kerning0
+ y\cf9 \expnd0\expndtw0\kerning0
+,\cf7 \expnd0\expndtw0\kerning0
+ z\cf9 \expnd0\expndtw0\kerning0
+)\cf7 \expnd0\expndtw0\kerning0
+ \cf9 \expnd0\expndtw0\kerning0
+\{\cf7 \expnd0\expndtw0\kerning0
+ \cf9 \expnd0\expndtw0\kerning0
+\}\cf7 \expnd0\expndtw0\kerning0
+\
+\cf5 \expnd0\expndtw0\kerning0
+var\cf7 \expnd0\expndtw0\kerning0
+ args \cf8 \cb1 \expnd0\expndtw0\kerning0
+=\cf7 \cb6 \expnd0\expndtw0\kerning0
+ \cf9 \expnd0\expndtw0\kerning0
+[\cf10 \expnd0\expndtw0\kerning0
+0\cf9 \expnd0\expndtw0\kerning0
+,\cf7 \expnd0\expndtw0\kerning0
+ \cf10 \expnd0\expndtw0\kerning0
+1\cf9 \expnd0\expndtw0\kerning0
+,\cf7 \expnd0\expndtw0\kerning0
+ \cf10 \expnd0\expndtw0\kerning0
+2\cf9 \expnd0\expndtw0\kerning0
+];\cf7 \expnd0\expndtw0\kerning0
+\
+\cf11 \expnd0\expndtw0\kerning0
+myFunction\cf9 \expnd0\expndtw0\kerning0
+(...\cf7 \expnd0\expndtw0\kerning0
+args\cf9 \expnd0\expndtw0\kerning0
+);\cf7 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl420
+
+\f1\fs24 \cf2 \cb1 \expnd0\expndtw0\kerning0
+\
+\
+\pard\pardeftab720\sl420
+
+\b\fs28 \cf2 \expnd0\expndtw0\kerning0
+Data Flow In ReactJS
+\b0\fs24 \expnd0\expndtw0\kerning0
+\
+-By default, all the data flows only in one direction:from parent component to child component. \
+-In React, an owner component sets props for another components\
+-A component is the owner of a child component if that child get created in the render method of the parent. It is different from \
+parent-child relationship. \
+-A component should not mutate its props. They should always be consistent with what the parent has set. \
+-Props can be accessed by this.props. If anything in the parent\'92s props changes, React will make sure that the changes are\
+flow downstream and will re-render the component tree. \
+\
+\
+
+\b\fs28 \expnd0\expndtw0\kerning0
+State in ReactJS\
+\pard\pardeftab720\sl420
+
+\b0\fs24 \cf2 \expnd0\expndtw0\kerning0
+The main difference between state and props is that props are passed to the component from the parent component;\
+whereas, state is something that is internal to the component.\
+-If a component does not change, then there is no need to use state, It\'92s better to depend on props passed by the parent \
+component to the child component.\
+\
+\
+\pard\pardeftab720\sl420
+
+\b\fs28 \cf2 \expnd0\expndtw0\kerning0
+What is AJAX (Asynchronous JavaScript and XML)\
+\pard\pardeftab720\sl420
+
+\b0\fs24 \cf2 \expnd0\expndtw0\kerning0
+In short, AJAX is about loading data in background to update some part of the webpage.\
+-jQuery provides several methods for AJAX functionality\
+-With the jQuery AJAX methods, we can request text, HTML, XML, or JSON from a remote server via HTTP GET or POST.\
+In short , with AJAX you can: \
+\pard\pardeftab720\sl480
+
+\f12 \cf0 \expnd0\expndtw0\kerning0
+Update a web page without reloading the page\
+Request data from a server - after the page has loaded \
+Receive data from a server - after the page has loaded\
+Send data to a server - in the background
+\f1 \cf2 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl420
+\cf2 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl420
+
+\b\fs28 \cf33 \expnd0\expndtw0\kerning0
+Tuple in Swift -\cf20  (blue is the terminal output )
+\b0\fs24 \cf33 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs26 \cf0 \expnd0\expndtw0\kerning0
+It a group of multiple values into a compound value. \
+let http404Error = (404, "Not Found")\
+\cf20 http404Error: (Int, String) = \{\
+  0 = 404\
+  1 = "Not Found"\
+\}\cf0 \
+ \cf13 decomposing the tuple value\cf0 \
+let (statusCode, statusMessage) = http404Error\
+statusCode: Int = 404\
+statusMessage: String = "Not Found"\
+\
+\cf13 using _ when you don\'92t need the other value in the tuple \cf0 \
+let (justTheStatusCode,_) = http404Error\
+\cf20 justTheStatusCode: Int = 404\
+\
+\cf13 access the individual element values in a tuple using index numbers starting at zero:\'94\cf0 \
+  print(http404Error.0)\
+\pard\pardeftab720\sl420
+\cf37 \expnd0\expndtw0\kerning0
+404\cf0 \expnd0\expndtw0\kerning0
+\
+  print(http404Error.1)\
+\pard\pardeftab720\sl420
+\cf20 Not Found\cf0 \
+ 
+\f1\fs24 \cf2 \expnd0\expndtw0\kerning0
+\
 }
